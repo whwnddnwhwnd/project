@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Nanum+Gothic&display=swap');
+@import url(https://fonts.googleapis.com/earlyaccess/jejugothic.css);
+
+.form-group {
+   font-family: 'Nanum Gothic', sans-serif;
+}
+.form-check {
+   font-family: 'Nanum Gothic', sans-serif;
+   font-size: 17px;
+   font-weight: 600;
+   color: black;
+   padding-top: 5px;
+   padding-left: 0; 
+   letter-spacing: 1px;
+}
+.menu-form {
+	font-family: 'Nanum Gothic', sans-serif; 
+	font-size: 17px; 
+	font-weight: 600; 
+	color: black; 
+	letter-spacing: 1px;
+}
+input[type=checkbox]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(1.5); /* IE */
+  -moz-transform: scale(1.5); /* FF */
+  -webkit-transform: scale(1.5); /* Safari and Chrome */
+  -o-transform: scale(1.5); /* Opera */
+  padding: 5px;
+}
+
+.left {
+   padding-left: 15px;
+}
+.rs-search {
+   font-family: 'Nanum Gothic', sans-serif;
+   font-weight: 600;
+}
+.menuName {
+   color: black;
+}
+#footer_main {
+   position:fixed;
+    width:100%;
+    bottom: 0;
+}
+input::-webkit-input-placeholder {
+  font-family: 'Nanum Gothic', sans-serif;
+}
+input:-moz-placeholder {
+  font-family: 'Nanum Gothic', sans-serif;
+}
+.contact-section {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.provide-service {
+	padding-bottom: 0;
+}
+.real-time {
+	margin-top: 110px;
+}
+.btn-social-login {
+   transition: all .2s;
+   outline: 0;
+   border: 1px solid transparent;
+   padding: .5rem !important;
+   border-radius: 50%;
+   color: #fff;
+}
+.contact-btn {
+	width: 100%;
+	font-family: 'Do Hyeon', sans-serif;
+	letter-spacing: 1px; 
+	font-size: 18px;
+	margin-right: 0;
+}
+.login-btn {
+	width: 100%; font-family: 'Do Hyeon', sans-serif; 
+	letter-spacing: 3px; 
+	font-size: 18px; 
+	margin-right: 0;
+}
+.social-btn {
+	padding-top: 1px;
+}
+.tab-bar {
+	width: 1040px;
+}
+
+.get-in-touch {
+	margin-top: 50px;
+	margin-bottom: 100px;
+}
+.btn-social-login:focus {
+   box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
+}
+.text-dark { color: #343a40!important; }
+.brown {
+   color: #c8a97e;
+}
+.no-comment {
+    padding-top: 100px;
+    padding-left: 50px;
+    font-weight: 600;
+}
+.line-h {
+	padding-bottom: 10px;
+}
+.check-form {
+	font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 600;
+}

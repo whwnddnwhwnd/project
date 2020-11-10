@@ -1,0 +1,177 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+   pageEncoding="UTF-8"%>
+<%@ include file="../layout/joinFormHeader.jsp"%>
+
+<div style="background-color: black;">&nbsp;</div>
+<div style="background-color: black;">&nbsp;</div>
+<div style="background-color: black;">&nbsp;</div>
+<div style="background-color: black;">&nbsp;</div>
+<section class="container mt-3 " style="max-width: 1200px;">
+   <div class="container-fluid px-0">
+      <div
+         class="order-md-last ftco-animate makereservation p-4 p-md-5 pt-5">
+         <div class="py-md-5">
+            <div class="heading-section ftco-animate mb-5">
+               <h2 class="mb-4"
+                  style="font-family: 'Do Hyeon', sans-serif; letter-spacing: 3px; font-weight: 600;">회원가입</h2>
+            </div>
+            <form>
+               <div class="row">
+                  <div class="col-md-6 line-h">
+                     <div class="form-group">
+                        <label for="username">아이디</label> <input type="text"
+                           class="form-control id_blank_check" placeholder="아이디는 4 ~ 20 글자로 입력해주세요" id="username" required>
+                        <div class="check-form" id="id_check"></div>
+                     </div>
+                  </div>
+                  <div class="col-md-6 line-h">
+                     <div class="form-group">
+                        <label for="name">성함</label> <input type="text"
+                           class="form-control name_check" placeholder="성함을 입력해주세요" id="name" required>
+                     </div>
+                  </div>
+                  <div class="col-md-6 line-h">
+                     <div class="form-group">
+                        <label for="password">비밀번호</label> <input type="password"
+                           class="form-control pw_blank_check" placeholder="비밀번호는 8 ~ 20 글자로 입력해주세요" id="password" required>                  
+                     <div class="check-form" id="pw_check"></div>
+                     </div>
+                  </div>
+                  <div class="col-md-6 line-h">
+                     <div class="form-group">
+                        <label for="birth">생년월일</label> <input type="text"
+                           class="form-control birth_check" placeholder="예)19961208" id="birth" required>
+                     </div>
+                  </div>
+                  <div class="col-md-6 line-h">
+                     <div class="form-group">
+                        <label for="email">이메일</label> <input type="email"
+                           class="form-control em_check" placeholder="ex)eatstime@naver.com"
+                           id="email" required>
+                     </div>
+                  </div>
+                  <div class="col-md-6 line-h">
+                     <div class="form-group">
+                        <label for="telephone">연락처</label> <input type="text"
+                           class="form-control tel_check" placeholder="예)01098719770" id="telephone" required>
+                     </div>
+                  </div>
+                  <div class="col-md-12 line-h">
+                     <div class="form-group">
+                        <label for="gender">성별</label>
+                        <div class="select-wrap one-third">
+                           <div class="icon">
+                              <span class="ion-ios-arrow-down"></span>
+                           </div>
+                           <select id="gender" class="form-control" required>
+                              <option value="male">남</option>
+                              <option value="female">여</option>
+                           </select>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-12 mt-3 line-h">
+                     <div class="form-group">
+                        <button type="button" 
+                            class="btn btn-primary py-3 px-5" id="btn-save"
+                              style="width: 490px; font-family: 'Nanum Gothic', sans-serif; font-size:17px; font-weight:600; letter-spacing: 1px;">가입하기</button>
+                     </div>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</section>
+<script>
+$(function (){
+$("#username").blur(function() {
+      var id_temp = $('#username').val();
+      var name_temp = $('#name').val();
+      var pw_temp = $('#password').val();
+      var birth_temp = $('#birth').val();
+      var email_temp = $('#email').val();
+      var tel_temp = $('#telephone').val();
+      
+      $.ajax({
+         url : "/auth/usernameCheck?username=" + id_temp
+         ,type : 'get'
+         ,success : function(data) {
+            console.log(data);                  
+            if (data == 1) {
+               // 1 : 아이디 중복
+               $("#id_check").text("사용중인 아이디입니다 :p");
+               $("#id_check").css("color", "red");
+               $("#btn-save").attr('disabled',true);
+            } else {
+               $("#id_check").empty();
+               $("#btn-save").attr('disabled',false);
+            }
+            if(id_temp.length < 4 || id_temp.length > 20 ){
+               // 아이디 길이 / 문자열 검사
+               $("#id_check").text("아이디는 4 ~ 20 글자로 입력해주세요");
+               $('#id_check').css('color', 'red');
+               $("#btn-save").attr('disabled',true);
+            } else {
+               $("#id_check").empty();
+               $("#btn-save").attr('disabled',false);
+            }
+            if(id_temp == " "){
+               // 아이디 빈칸 검사
+               $('.id_blank_check').css('background-color', 'red');
+               $("#btn-save").attr('disabled',true);
+            }  else {
+               $(".id_blank_check").empty();
+               $("#btn-save").attr('disabled',false);
+            }
+            if(pw_temp == " "){
+               // 비밀번호 빈칸 검사
+               $('.pw_blank_check').css('background-color', 'red');
+               $("#btn-save").attr('disabled',true);
+            }  else {
+               $(".pw_blank_check").css('background-color', 'transparent');
+               $("#btn-save").attr('disabled',false);
+            }
+            if(pw_temp.length < 8 || pw_temp.length > 20 ){
+               // 비밀번호 길이 검사
+               $('#pw_check').text('비밀번호는 8 ~ 20 글자로 입력해주세요 :)');
+               $('#pw_check').css('color', 'red');
+               $("#btn-save").attr('disabled',true);
+            }  else {
+               $("#pw_check").empty();
+               $("#btn-save").attr('disabled',false);
+            }
+            
+            if(birth_temp == " "){
+               // 빈칸 검사
+               $('.birth_check').css('background-color', 'red');
+               $("#btn-save").attr('disabled',true);
+            }  else {
+               $(".birth_check").css('background-color', 'transparent');
+               $("#btn-save").attr('disabled',false);
+            }
+            if(email_temp == " "){
+               // 빈칸 검사
+               $('.em_check').css('background-color', 'red');
+               $("#btn-save").attr('disabled',true);
+            }  else {
+               $(".em_check").css('background-color', 'transparent');
+               $("#btn-save").attr('disabled',false);
+            }
+            if(tel_temp == " "){
+               // 빈칸 검사
+               $('.tel_check').css('background-color', 'red');
+               $("#btn-save").attr('disabled',true);
+            }  else {
+               $(".tel_check").css('background-color', 'transparent');
+               $("#btn-save").attr('disabled',false);
+            }         
+            }, error : function() {
+                  console.log("회원가입 실패");
+            }
+         });
+      });
+   };
+</script>
+<script src="/js/user.js"></script>
+<%@ include file="../layout/footer.jsp"%>

@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Nanum+Gothic&display=swap');
+
+a {
+	text-decoration: none;
+}
+
+:after, :before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/*common*/
+.pad-15 {
+	padding: 15px;
+}
+
+.clear {
+	clear: both;
+}
+
+.clear:after, .clear:before {
+	content: " ";
+	display: table;
+}
+
+.header {
+	min-height: 55px;
+	background: #273135;
+	border-bottom: 1px solid #ddd;
+}
+
+a.toggle-nav {
+	top: 55px;
+	left: 47px;
+	position: absolute;
+	color: #fff;
+	line-height: 25px;
+	font-size: 22px;
+	background: #000000;
+	padding: 5px 5px 5px 5px;
+	border-radius: 1px;
+	transform: rotate(90deg);
+	text-align: center;
+}
+
+.header>.left-head {
+	width: 250px;
+	display: block;
+	background: #FFFFFF;
+	position: relative;
+}
+
+.header>.left-head .logo img {
+	max-width: 150px;
+	width: 100%;
+}
+
+.header>.left-head .logo {
+	padding: 10px 0px 10px 15px;
+}
+
+.nice-nav {
+	width: 250px;
+	background: #FFFFFF;
+	height: 653px;
+	transition: all 0.4s ease-in-out 0s;
+	float: left;
+	border: 1px solid #ddd;
+}
+.navbar-title{
+	font-family: 'Do Hyeon', sans-serif;
+	font-size: 20px;
+	color: #808000;
+	padding-left: 12px;
+	letter-spacing: 1px;
+}
+.navbar-title-dash{
+	font-family: 'Do Hyeon', sans-serif;
+	font-size: 20px;
+	color: #808000;
+	padding-left: 12px;
+	letter-spacing: 1px;
+}
+.nice-nav.open {
+	margin-left: 0px;
+	display: block;
+}
+
+.nice-nav>.user-info {
+	padding: 10px 15px;
+	color: #FFFFFF;
+	border-bottom: 1px solid #ddd;
+	min-height: 41px;
+}
+
+.nice-nav .user-info .user-name, .nice-nav .user-info img {
+	float: left;
+}
+
+.nice-nav>.user-info>.user-name {
+	padding: 0px 10px;
+}
+
+.user-info>.user-name h5 {
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+.user-info>.user-name span {
+	font-size: 80%;
+	color: #555;
+	font-style: italic;
+}
+
+.nice-nav li.my-page span.toggle-right {
+	text-align: center;
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	padding: 15px;
+	top: 0px;
+	background: #ffffff;
+	bottom: 0;
+}
+
+.nice-nav ul li a {
+	padding: 12px;
+	background: #ffffff;
+	border-bottom: 1px solid #ddd;
+	display: block;
+	color: #000000;
+	position: relative;
+}
+
+.nice-nav ul li.my-page ul {
+	background: #ffffff;
+	display: none;
+}
+
+.nice-nav ul li.my-page ul li a {
+	background: #ffffff;
+	padding: 10px 20px;
+}
+
+.mystyle {
+	float: right;
+}
+
+@import "compass/css3";
+
+$
+size: 50px ;
+ $thickness: 5px ;
+ $angle: 0deg ;
+body {
+	background: #ffffff;
+}
+.my-page-guest{
+	list-style: none;
+	padding-left: 0px;
+	margin-bottom: 30px;
+}
+.my-page-owner{
+	list-style: none;
+	padding-left: 0px;
+	margin-bottom: 30px;
+}
+.my-page-other{
+	list-style: none;
+	padding-left: 0px;
+}
+.my-page-title{
+	font-family: 'Nanum Gothic', sans-serif;
+	font-size: 15px;
+	font-weight: 600;
+	color: black;
+	padding-left: 16px;
+	letter-spacing: 1px;
+}
+.page-list{
+	font-family: 'Nanum Gothic', sans-serif;
+	font-size: 16px;
+	font-weight: 600;
+	color: black;
+	padding-left: 2px;
+	letter-spacing: 1px;
+}
+.page-list-other{
+	font-family: 'Nanum Gothic', sans-serif;
+	font-size: 15px;
+	font-weight: 600;
+	color: #c8a97e;
+	padding-left: 2px;
+	margin-bottom: 0;
+	letter-spacing: 1px;
+}
+.mypage-subheading {
+	font-family: 'Nanum Gothic', sans-serif; 
+	letter-spacing: 3px; 
+	font-weight: 600; 
+	font-size: 20px;
+}
+.mynote-btn {
+	float: none;
+	width: 320px;
+	height: 40px; 
+	font-family: 'Nanum Gothic', sans-serif; 
+	font-weight: 600; 
+	letter-spacing: 1px;
+}
+.general-btn {
+	width: 200px; 
+	height: 40px; 
+	font-family: 'Nanum Gothic', sans-serif; 
+	font-weight: 600; 
+	letter-spacing: 1px;
+}
+.general-btn2 {
+	width: 240px; 
+	height: 40px; 
+	font-family: 'Nanum Gothic', sans-serif; 
+	font-weight: 600; 
+	letter-spacing: 1px;
+}
+
+.ftco-mypage {
+	padding-bottom: 400px;
+    position: relative;
+}
+.no-data {
+	font-family: 'Nanum Gothic', sans-serif; 
+	letter-spacing: 3px; 
+	color: black; 
+	font-weight: 600; 
+	padding-top: 30px;
+}
+.no-data-note {
+	font-family: 'Nanum Gothic', sans-serif; 
+	letter-spacing: 3px; 
+	color: black; 
+	font-weight: 600; 
+}
+.mypage-title {
+	font-family: 'Do Hyeon', sans-serif; 
+	letter-spacing: 3px; 
+	font-weight: 600;
+}
+.mypage-heading {
+	padding: 6em 0; 
+	padding-left: 50px; 
+	padding-bottom: 1px;
+}
+.mypage-img {
+	width: 150px;
+	height: 150px;
+}

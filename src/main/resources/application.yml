@@ -1,0 +1,64 @@
+server:
+  port: 8888
+  servlet:
+    context-path: /
+    
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+      
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/blog?serverTimezone=Asia/Seoul
+    username: root
+    password: Resetagain11818!
+    
+  jpa:
+    open-in-view: true
+    hibernate:
+
+      ddl-auto: update
+      naming:
+
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+      use-new-id-generator-mappings: false
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+      
+  security:
+    oauth2:
+      client:
+        registration:
+         google:
+           client-id: 726814878841-krthkbjmvrna43ost4hrulh757do61s9.apps.googleusercontent.com
+           client-secret: wCKOOsSpIfpz50EmimdbHsRA
+           scope:
+            - email
+            - profile
+         facebook:
+           client-id: 689733958342727
+           client-secret: 7d8adc28c4e2911c6806f09f37a0918d
+           scope:
+            - email
+            - public_profile
+  mail:
+    host: smtp.naver.com
+    port: 465
+    username: eatstime@naver.com
+    password: eatstime1234
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.ssl.enable: true            
+         
+cos:
+  key: tempPassword
+
+

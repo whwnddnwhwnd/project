@@ -1,0 +1,118 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400);
+@import
+	url(https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css)
+	;
+
+
+body {
+	font-family: 'Roboto', Helvetica;
+	color: #737373;
+	font-weight: 300;
+}
+
+.container1 {
+	width: 400px;
+	margin: 0 auto;
+	margin-top: 3em;
+	padding: 4px;
+}
+
+.inner {
+	padding: 1em;
+	background-color: white;
+	overflow: hidden;
+	position: relative;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.rating {
+	float: left;
+	width: 100%;
+	float: left;
+	text-align: center;
+}
+
+.rating-num {
+	color: #333333;
+	font-size: 72px;
+	font-weight: 100;
+	line-height: 1em;
+}
+
+.rating-stars {
+	cursor: pointer;
+	font-size: 20px;
+	color: #E3E3E3;
+	margin-bottom: .5em;
+}
+
+.rating-stars span {
+	padding: 3px;
+}
+
+.rating-stars .active {
+	color: #737373;
+}
+
+.rating-stars .hover {
+	color: #9FC05A;
+}
+
+.rating-users, .rating-stars {
+	margin-bottom: 5px;
+	font-size: 14px;
+}
+
+.histo {
+	float: left;
+	width: 100%;
+	font-size: 13px;
+}
+
+.histo-star {
+	float: left;
+	padding: 3px;
+}
+
+.histo-rate {
+	cursor: pointer;
+	width: 100%;
+	display: block;
+	clear: both;
+}
+
+.bar-block {
+	margin-left: 5px;
+	color: black;
+	display: block;
+	float: left;
+	width: 75%;
+	position: relative;
+}
+
+.bar {
+	padding: 4px;
+	display: block;
+}
+
+.histo-rate:nth-child(5)>.bar-block>.bar {
+	background-color: #9FC05A;
+}
+
+.histo-rate:nth-child(4)>.bar-block>.bar {
+	background-color: #ADD633;
+}
+
+.histo-rate:nth-child(3)>.bar-block>.bar {
+	background-color: #FFD834;
+}
+
+.histo-rate:nth-child(2)>.bar-block>.bar {
+	background-color: #FFB234;
+}
+
+.histo-rate:nth-child(1)>.bar-block>.bar {
+	background-color: #FF8B5A;
+}
